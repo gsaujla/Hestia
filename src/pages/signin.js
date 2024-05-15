@@ -25,10 +25,10 @@ function Signin() {
         <h1 className='prata-heading'>SIGN IN TO YOUR HESTIA ACCOUNT</h1>
         <form className='forma'>
           <label htmlFor="email">Enter your email address</label>
-          <input type="text" id="email" />
+          <input className="sign-input" type="text" id="email" />
           <br />
           <label htmlFor="password">Enter your password</label>
-          <input type="password" id="password" />
+          <input className="sign-input" type="password" id="password" />
           <br />
         </form>
 

@@ -11,16 +11,16 @@ function header() {
             </h1> 
             <ul>
                 <li>
-                    <a href='/listings'>Listings</a>
+                    <a href='/profile'>Profile</a>
                 </li>
                 <li>
-                    <a href='/list'>Sublet</a>
+                    <a href='/settings'>Settings</a>
                 </li>
                 <li>
-                    <a href='/about'>About us</a>
+                    <a href='/help'>Help</a>
                 </li>
                 <li>
-                    <a href='/signin'>Login</a>
+                    <a href='/logout'>Logout</a>
                 </li>
             </ul>
         </div>

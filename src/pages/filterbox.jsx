@@ -11,7 +11,7 @@ function Filterbox() {
         <div className='filterbox'>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='searchCity'>Search City</label>
-                <input type='text' id='searchCity' placeholder='Enter city name' />
+                <input className="small-input" type='text' id='searchCity' placeholder='Enter city name' />
                 <div className='scroll-container'>
                     <h3>Price</h3>
                     <input type="range" min="0" max="1000" step="10" />

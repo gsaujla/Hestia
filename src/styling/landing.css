@@ -46,7 +46,7 @@ body {
     background-color: white; /* Optional: Add background color */
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    height: 100%;
+    min-height: 700px;
 
     
 }

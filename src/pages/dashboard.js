@@ -7,18 +7,14 @@ function dashboard() {
   return (<>
     <div className='container'>
         <Sideheader />
-            <div>
-                View your listings
+        <div className='main-container'>
+            <div className='dashboard-box-one'>
+                View your listings?
             </div>
-            <div>
-                Box 2
+            <div className='dashboard-box-two'>
+                Explore other listings?
             </div>
-            <div>
-                Box 3
-            </div>
-            <div>
-                Box 4
-            </div>
+        </div>        
     </div>
     <Footer />
     </>

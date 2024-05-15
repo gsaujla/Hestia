@@ -49,22 +49,22 @@ function Signup() {
         <h1 className='prata-heading'>WELCOME TO HESTIA</h1>
         <form className='forma'>
           <label htmlFor="email">Enter your email address</label>
-          <input type="text" id="email" />
+          <input className="sign-input" type="text" id="email" />
           <br />
           <label htmlFor="uni name">Enter the name of your University</label>
-          <input type="text" id="name" />
+          <input className="sign-input" type="text" id="name" />
           <br />
           <label htmlFor="email">Enter your university provided email address</label>
-          <input type="text" id="email" />
+          <input className="sign-input" type="text" id="email" />
           <br />
           <label htmlFor="email">Enter your mobile number to contact you</label>
-          <input type="text" id="email" />
+          <input className="sign-input" type="text" id="email" />
           <br />
           <label htmlFor="password">Enter your password</label>
-          <input type="password" id="password" />
+          <input className="sign-input" type="password" id="password" />
           <br />
           <label htmlFor="password">Confirm your password</label>
-          <input type="password" id="password" />
+          <input className="sign-input" type="password" id="password" />
           <br />
         </form>
         <button>CREATE YOUR HESTIA ACCOUNT</button>
