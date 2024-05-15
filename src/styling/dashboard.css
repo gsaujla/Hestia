@@ -1,0 +1,13 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.dashboard-container-inner-box {
+    display: flex;
+    flex-direction: row;
+
+}
