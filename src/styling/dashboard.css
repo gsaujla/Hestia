@@ -9,5 +9,29 @@
 .dashboard-container-inner-box {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6rem;
+}
+
+.dashboard-box-one,
+.dashboard-box-two
+ {
+    background-color: wheat;
+    height: 600px;
+    width: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid goldenrod;
+    border-radius: 25px;
 }

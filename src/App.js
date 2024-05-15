@@ -6,6 +6,7 @@ import Sublets from "./pages/list"
 import About from "./pages/about";
 import Dashboard from "./pages/dashboard";
 import Listings from "./pages/listings"
+import Profile from "./pages/profile"
 import {
   Routes, Route, BrowserRouter,
 } from 'react-router-dom';
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/list" element = {<Sublets/>} />
         <Route path="/listings" element = {<Listings/>} />
         <Route path="/dashboard" element = {<Dashboard/>} />
+        <Route path="/profile" element = {<Profile/>} />
       </Routes>
     </BrowserRouter>
     </>
