@@ -5,30 +5,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 /* Global styles */
-.container {
+.signin-container {
   display: flex;
   justify-content: center;
-  height: 90vh;
   align-items: center;
   background-color: #f0f0f0;
+  height: 100%;
 }
 
-.lefty-box,
-.right-box {
+.signin-lefty-box,
+.signin-righty-box {
   flex: 1;
-  padding: 5rem;
-  padding-top: 10rem;
+  height: 100%;
 }
 
-.lefty-box {
+.signin-lefty-box {
   background-color: #EDE0D4;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  height: 100vh;
 }
 
-.righty-box {
+.signin-righty-box {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@
   align-items: center;
   justify-content: space-between;
 }
-
+ 
 .sign-input[type='text'],
 .sign-input[type='password'],
 .sign-input[type='checkbox'] {
@@ -124,7 +124,6 @@ a {
 .blur-background {
   background-color: rgba(255, 255, 255, 0.5); 
   backdrop-filter: blur(10px); 
-  padding: 20px; 
   border-radius: 15px;
 }
 

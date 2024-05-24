@@ -11,6 +11,10 @@ function Signin() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [image1, image2, image3];
 
+  async function handleSignin () {
+    console.log("u have signed in");
+  }
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -20,8 +24,8 @@ function Signin() {
   }, [images.length]);
 
   return (
-    <div className="container">
-      <div className="lefty-box">
+    <div className="signin-container">
+      <div className="signin-lefty-box">
         <h1 className='prata-heading'>SIGN IN TO YOUR HESTIA ACCOUNT</h1>
         <form className='forma'>
           <label htmlFor="email">Enter your email address</label>
@@ -39,19 +43,19 @@ function Signin() {
 
           
         
-        <button>Sign in</button>
+        <button onClick={() => handleSignin()}>Sign in</button>
         <div className='row-equivalent-down'>
           <div>Dont have an account?</div>
         <button><a href="/signup">CREATE AN ACCOUNT INSTEAD?</a></button>
         </div>
         <a href='/'>return back</a>
       </div>
-      <div className="right-box" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+      <div className="signin-righty-box" style={{ backgroundImage: `url(${images[currentImageIndex]})`, height:  `100vh` }}>
         <div className='blur-background'>
           <h1 className='prata-bigheading'>WELCOME BACK</h1>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 

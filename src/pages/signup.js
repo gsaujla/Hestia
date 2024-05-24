@@ -31,11 +31,12 @@ function Signup() {
   return (
     <div className="container">
       <div 
-      className="left-box"
+      className="signup-left-box"
       style={{
         backgroundImage: `url(${images[currentImageIndex]})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        height: `100vh`,
       }}>
         <h1 className='prata-bigheading'>
           <div className='blur-background'>
@@ -45,7 +46,7 @@ function Signup() {
       </div>
 
 
-      <div className="right-box">
+      <div className="signup-right-box">
         <h1 className='prata-heading'>WELCOME TO HESTIA</h1>
         <form className='forma'>
           <label htmlFor="email">Enter your email address</label>

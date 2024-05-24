@@ -198,6 +198,38 @@ body {
 
 }
 
+.hyperlink-column li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-sideheader-column li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-sideheader-column li a {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    width: auto;
+}
+
+
+.hyperlink-column li a{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    
+}
 /* Fonts */
 
 .jaini-regular {
@@ -206,4 +238,12 @@ body {
     font-style: normal;
     font-size: 32px;
 
+  }
+
+  .termsndconditionsform {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    width: 1000px;
+    padding-bottom: 100px;
   }
