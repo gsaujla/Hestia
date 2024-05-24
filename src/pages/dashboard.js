@@ -9,10 +9,10 @@ function dashboard() {
         <Sideheader />
         <div className='main-container'>
             <div className='dashboard-box-one'>
-                View your listings?
+              <a href='/yourListing'>View your listings?</a>  
             </div>
             <div className='dashboard-box-two'>
-                Explore other listings?
+              <a href='/listings'> Explore other listings?</a> 
             </div>
         </div>        
     </div>

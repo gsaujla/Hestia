@@ -16,10 +16,10 @@ function footer() {
         <div class='footer'>
             <div className='jaini-regular'>HESTIA</div>
             <ul className='hyperlink-column'>
-                <li>ABOUT US</li>
-                <li>CONTACT US</li>
-                <li>PRIVACY POLICY</li>
-                <li>TERMS AND CONDITIONS</li>
+                <li><a href='/about'>ABOUT US</a> </li>
+                <li><a href='/contact'>CONTACT US</a> </li>
+                <li><a href='/privacy'>PRIVACY POLICY</a> </li>
+                <li><a href='/TermsNconditions'>TERMS AND CONDITIONS</a></li>
             </ul>
             <div className='solid-line'></div>
             <ul className='socials-row'>
