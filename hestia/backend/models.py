@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class User(models.Model):
-    user_id = models.IntegerField(null = False)
+    id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length = 30, null = False)
     last_name = models.CharField(max_length = 30, null = False)
     email = models.CharField(max_length = 100, null = False)
@@ -11,7 +11,7 @@ class User(models.Model):
     password = models.CharField(('password'), max_length=128)
 
 class Property(models.Model):
-    prop_id = models.IntegerField(null = False)
+    prop_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length = 100, null = False)
     street_01 = models.CharField(max_length = 30, null = False)
     street_02 = models.CharField(max_length = 30, null = False)
