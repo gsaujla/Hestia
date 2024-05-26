@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        .outer-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .sublet-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type='text'],
+        input[type='number'],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #efefef;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 0.75rem 1rem;
+            background-color: gray;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        .titlebox {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+            padding: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class='outer-box'>
+        <div class='titlebox'>
+            Let's find your home some trusted tenants.
+        </div>
+        <form class='sublet-form' onsubmit="handleSubmit()">
+            <h1>Please enter some information about your listing.</h1>
+            <div class="form-group">
+                <label for="street1">Street Address 1:</label>
+                <input class='big-input' type='text' id="street1" />
+            </div>
+            <div class="form-group">
+                <label for="street2">Street Address 2:</label>
+                <input class='big-input' type='text' id="street2" placeholder='Optional' />
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code:</label>
+                <input class='big-input' type='text' id="zip" placeholder='Enter your Zip code' />
+            </div>
+            <div class="form-group">
+                <label for="province">Province:</label>
+                <input class='big-input' type='text' id="province" placeholder='Your province' />
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input class='big-input' type='text' id="country" placeholder='Country' />
+            </div>
+            <div class="form-group">
+                <label for="apartment">Apartment Type:</label>
+                <input class='big-input' type='text' id="apartment" placeholder='Apartment? or Condominium...' />
+            </div>
+            <div class="form-group">
+                <label for="rooms">Number of Rooms available:</label>
+                <input type='number' id="rooms" placeholder='Number of Rooms' />
+            </div>
+            <div class="form-group">
+                <label for="price">Price per room:</label>
+                <input type='number' id="price" placeholder='Price in CAD per term of sublet' />
+            </div>
+            <div class="form-group">
+                <label for="price">Term of sublet:</label>
+                <input class='big-input' type='text' id="price" placeholder='For how long?' />
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder='Give additional information...'></textarea>
+            </div>
+            <div class="form-group">
+                <label for="images">Add images:</label>
+                <input type="file" id="images" accept="image/*" multiple />
+            </div>
+            <button type='submit'>Confirm</button>
+        </form>
+    </div>
+</body>
+</html>
