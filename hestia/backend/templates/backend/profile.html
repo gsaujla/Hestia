@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hestia Listings Page</title>
+    <title>Edit Profile</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jaini&display=swap">
     <style>
@@ -36,26 +36,50 @@
             font-weight: bold;
             color: #000; 
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            width: 80%;
-            margin: 20px 0;
-        }
-        .grid-item {
-            background-color: #fff;
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            padding: 20px;
-            text-align: center;
-            font-size: 20px;
+            background-color: #fff;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            display: block;
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
         .footer {
             background-color: #000;
@@ -113,29 +137,41 @@
     <header class="header">
         <div class="header">
             <h1 class="top-logo-name">
-                <a href='./landing.html'><img src="{% static 'images/landing_page/Logo.png' %}" alt="logo"></a>
+                <a href='/'><img src="{% static 'images/landing_page/Logo.png' %}" alt="logo"></a>
             </h1>
             <ul>
-                <li><a href='listings'>Listings</a></li>
-                <li><a href='sublet'>Sublet</a></li>
-                <li><a href='aboutus'>About us</a></li>
-                <li><a href='signin'>Login</a></li>
-                <li><a href='dashboard'>Dashboard</a></li>
+                <li><a href='/listings'>Listings</a></li>
+                <li><a href='/list'>Sublet</a></li>
+                <li><a href='/about'>About us</a></li>
+                <li><a href='/signin'>Login</a></li>
+                <li><a href='/dashboard'>Dashboard</a></li>
             </ul>
         </div>
     </header>
-    <div class="container">
-        <div class="filterbox">
-            <!-- Content for FilterBox here -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Edit Profile</h1>
+            <div class="profile-picture"></div>
         </div>
-        <div class="grid-container">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-        </div>
+        <form onsubmit="handleSubmit(event)">
+            <label>
+                Full Name:
+                <input type="text" name="fullName" value="Rhythm Chawla" oninput="handleInputChange(event)">
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" value="#######@example.com" oninput="handleInputChange(event)">
+            </label>
+            <label>
+                Bio:
+                <textarea name="bio" oninput="handleInputChange(event)">Web Developer</textarea>
+            </label>
+            <label>
+                Location:
+                <input type="text" name="location" value="Waterloo" oninput="handleInputChange(event)">
+            </label>
+            <button type="submit">Save</button>
+        </form>
     </div>
     <footer class="footer">
         <div class="jaini-regular">HESTIA</div>
@@ -147,7 +183,7 @@
         </ul>
         <div class="solid-line"></div>
         <ul class="socials-row">
-            <li><img src="{% static '/images/socials_logo/insta.png' %}" alt="instalogo">Instagram</li>
+            <li><img src=" {% static '/images/socials_logo/insta.png' %}" alt="instalogo">Instagram</li>
             <li><img src="{% static '/images/socials_logo/twitter.png' %}" alt="twitter">Twitter</li>
             <li><img src="{% static '/images/socials_logo/discord.png' %}" alt="discord">Discord</li>
             <li><img src="{% static '/images/socials_logo/linkedin.png' %}" alt="linkedin">Linkedin</li>
@@ -155,5 +191,25 @@
         </ul>
         <div class="solid-line"></div>
     </footer>
+
+    <script>
+        function handleInputChange(e) {
+            const { name, value } = e.target;
+            const userData = JSON.parse(localStorage.getItem('userData')) || {
+                fullName: 'Rhythm Chawla',
+                email: '#######@example.com',
+                bio: 'Web Developer',
+                location: 'Waterloo',
+            };
+            userData[name] = value;
+            localStorage.setItem('userData', JSON.stringify(userData));
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            console.log(userData);
+        }
+    </script>
 </body>
 </html>
